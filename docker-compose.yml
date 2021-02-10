@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  zdot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: /usr/bin/zsh --login
+    volumes:
+      - ./docker-home:/root
+      - ./dotfiles:/root/dotfiles
